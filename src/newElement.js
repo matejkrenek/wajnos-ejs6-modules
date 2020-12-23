@@ -13,6 +13,4 @@ class Element {
     }
 }
 
-export {
-    Element
-}
+export default Element

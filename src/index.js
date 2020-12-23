@@ -1,12 +1,14 @@
-import { homePage } from './modules/homePage'
-import { navbar } from './modules/navbar'
+import pageLoaded from './pageLoaded'
+import homePage from './modules/homePage'
+import winesPage from './modules/winesPage'
+import contactPage from './modules/contactPage'
 
 const contentContainer = document.getElementById('content')
-const navLink = navbar().querySelectorAll('.navLink a')
+let addedContent = homePage()
 
-navLink.forEach(link => {
-    link.addEventListener('click', )
-})
+const init = () => {
+    pageLoaded()
+    contentContainer.appendChild(addedContent)
+}
 
-contentContainer.append(navbar())
-contentContainer.append(homePage())
+init()
