@@ -6,9 +6,26 @@ import contactPage from './modules/contactPage'
 const contentContainer = document.getElementById('content')
 let addedContent = homePage()
 
-const init = () => {
-    pageLoaded()
-    contentContainer.appendChild(addedContent)
+init()
+
+function listeners(){
+    const tabs = document.querySelectorAll('.navLink')
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(tab => tab.classList.remove('active'))
+            tab.classList.add('active')
+            addedContent.remove()
+            addedContent = tab.dataset.tab == 'home' ? homePage() : tab.dataset.tab == 'wines' ? winesPage() : contactPage()
+            contentContainer.appendChild(addedContent)
+        })
+    })
 }
 
-init()
+function init(){
+    pageLoaded()
+    contentContainer.appendChild(addedContent)
+    listeners()
+}
+
+
+

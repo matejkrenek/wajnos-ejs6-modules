@@ -7,7 +7,7 @@ const pageLoaded = () => {
     navbar.innerHTML = `
         <h3 class="logo">Wajnos.</h3> 
         <ul class="navList">
-            <li class="navLink" data-tab="home">Home</li>
+            <li class="navLink active" data-tab="home">Home</li>
             <li class="navLink" data-tab="wines">Wines</li>
             <li class="navLink" data-tab="contact">Contact</li>
         </ul>
