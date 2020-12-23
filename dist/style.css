@@ -8,6 +8,26 @@ body{
 
 }
 
-li.active{
-    color: red;
+#content{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    grid-column: 2/11;
+    padding: 24px 0;
+}
+
+    .navList{
+        list-style: none;
+        display: flex;
+        gap: 64px;
+    }
+
+.homeSection, .winesSection, .contactSection{
+    grid-column: 3/10;
 }
